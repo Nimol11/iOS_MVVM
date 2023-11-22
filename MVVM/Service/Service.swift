@@ -1,6 +1,6 @@
 //
 //  Service.swift
-//  Json
+//  MVVM
 //
 //  Created by Nimol on 20/11/23.
 //
@@ -21,7 +21,6 @@ class Service {
             if  error == nil,
                 let data = dataRespone,
                 let resultData = try? JSONDecoder().decode([Model].self, from: data) {
-                print(resultData)
                 completion(.success(resultData))
             } else {
                 completion(.failure(.cannotParseData))

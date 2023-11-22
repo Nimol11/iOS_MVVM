@@ -1,6 +1,6 @@
 //
 //  Model.swift
-//  Json
+//  MVVM
 //
 //  Created by Nimol on 20/11/23.
 //

@@ -1,6 +1,6 @@
 //
 //  ViewModel.swift
-//  Json
+//  MVVM
 //
 //  Created by Nimol on 20/11/23.
 //
@@ -38,4 +38,10 @@ class ViewModel {
     func mapCelldata () {
         self.dataCell.value = self.dataSource?.compactMap({ViewModelCell(model: $0)})
     }   
+    func retrive(with name: String) -> Model? {
+        guard let model = dataSource?.first(where: {$0.name == name}) else {
+            return nil
+        }
+        return model
+    }
 }
